@@ -1,0 +1,8 @@
+{
+  "name": "l-a-official-artist-website-chinese",
+  "compatibility_date": "2026-11-24",
+  "assets": {
+    "directory": "./dist-pages",
+    "not_found_handling": "single-page-application"
+  }
+}

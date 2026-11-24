@@ -25,3 +25,5 @@ website/static/frontend/
 .vscode/
 .DS_Store
 Thumbs.db
+
+dist-pages/
