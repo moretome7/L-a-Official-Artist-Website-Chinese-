@@ -84,6 +84,23 @@ Vite 读取 `frontend/vite.config.ts`，将带哈希的构建文件输出到 `we
 npm --prefix frontend run build
 ```
 
+## Cloudflare Workers 静态部署
+
+仓库已包含 Cloudflare Workers 静态资源配置 `wrangler.jsonc`。公开前台会构建为纯静态 SPA，并输出到 `dist-pages/`：
+
+```powershell
+npm ci
+npm run build
+```
+
+在 Cloudflare 的 GitHub 自动构建中，请将构建命令设置为：
+
+```text
+npm ci && npm run build
+```
+
+构建根目录保持仓库根目录，构建产物目录为 `dist-pages`。`dist-pages/` 是生成目录，不会提交到 Git；Cloudflare 会在每次拉取 `main` 后重新构建。当前静态部署只承载 Vue 公开前台，Django Admin 和 SimpleUI 仍通过本地 Django 服务使用。
+
 ## 常用验证命令
 
 ```powershell
