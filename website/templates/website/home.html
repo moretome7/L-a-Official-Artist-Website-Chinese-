@@ -1,0 +1,18 @@
+{% load static %}
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f1e9">
+    <meta name="description" content="Léa 的个人网站，记录作品、灵感与生活。">
+    <title>Léa | Personal Website</title>
+    {% for css_path in vite_css %}
+        <link rel="stylesheet" href="{% static css_path %}">
+    {% endfor %}
+</head>
+<body>
+    <div id="app"></div>
+    <script type="module" src="{% static vite_js %}"></script>
+</body>
+</html>

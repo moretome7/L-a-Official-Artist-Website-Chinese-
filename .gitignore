@@ -1,0 +1,27 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Local data and runtime output
+db.sqlite3
+db.sqlite3-*
+staticfiles/
+*.log
+
+# Frontend dependencies and generated assets
+frontend/node_modules/
+frontend/dist/
+frontend/.playwright-cli/
+frontend/output/
+frontend/.vite-preview.*
+website/static/frontend/
+
+# Environment and editor files
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
